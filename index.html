@@ -1,0 +1,379 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Adishree Gupta - Portfolio</title>
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<meta description="Generative AI Engineer specializing in LLMs, RAG Pipelines & AI Agents. MERN Stack Developer with expertise in Cybersecurity.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			line-height: 1.6;
+			color: #333;
+			margin: 0;
+			padding: 0;
+		}
+
+		.wrapper {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+
+		header.primary {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			color: white;
+			padding: 30px 0;
+			box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+		}
+
+		.logo-container {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.logo-container h1 {
+			font-size: 2.5em;
+			margin: 0 0 15px 0;
+			font-weight: 700;
+			letter-spacing: -1px;
+		}
+
+		#logo {
+			max-width: 175px;
+			border-radius: 50%;
+			border: 4px solid white;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+		}
+
+		#mainnav {
+			text-align: center;
+		}
+
+		#mainnav ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			gap: 30px;
+			flex-wrap: wrap;
+		}
+
+		#mainnav a {
+			color: white;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 1.1em;
+			padding: 8px 16px;
+			border-radius: 6px;
+			transition: all 0.3s ease;
+		}
+
+		#mainnav a:hover {
+			background: rgba(255,255,255,0.2);
+			transform: translateY(-2px);
+		}
+
+		section {
+			padding: 60px 0;
+		}
+
+		h2 {
+			font-size: 2.5em;
+			margin-bottom: 40px;
+			text-align: center;
+			color: #2d3748;
+			font-weight: 700;
+		}
+
+		h3 {
+			font-size: 1.8em;
+			color: #4a5568;
+			margin-top: 0;
+			font-weight: 600;
+		}
+
+		h4 {
+			font-size: 1.2em;
+			color: #667eea;
+			margin: 10px 0;
+			font-weight: 600;
+		}
+
+		.featured {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 30px;
+			margin-bottom: 60px;
+			background: white;
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+		}
+
+		.featured article:first-child {
+			overflow: hidden;
+		}
+
+		.featured img {
+			width: 100%;
+			height: auto;
+			display: block;
+			transition: transform 0.3s ease;
+		}
+
+		.featured img:hover {
+			transform: scale(1.05);
+		}
+
+		.featured article:last-child {
+			padding: 30px;
+		}
+
+		.projects {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 30px;
+		}
+
+		.projects article {
+			background: white;
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+			transition: all 0.3s ease;
+		}
+
+		.projects article:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+		}
+
+		.projects img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		.projects h3 {
+			padding: 20px 20px 10px 20px;
+			margin: 0;
+			font-size: 1.5em;
+		}
+
+		.projects p {
+			padding: 0 20px 20px 20px;
+			margin: 5px 0;
+		}
+
+		.secondary {
+			background: #f7fafc;
+		}
+
+		#about-contact .wrapper {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 30px;
+		}
+
+		.profile-photo {
+			text-align: center;
+		}
+
+		.profile-photo img {
+			max-width: 260px;
+			border-radius: 50%;
+			border: 6px solid white;
+			box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+		}
+
+		#about-contact article {
+			background: white;
+			padding: 30px;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+		}
+
+		#about-contact h2 {
+			text-align: left;
+			font-size: 2em;
+			margin-top: 0;
+		}
+
+		.social {
+			font-size: 2em;
+			display: flex;
+			gap: 20px;
+		}
+
+		.social a {
+			color: #667eea;
+			transition: all 0.3s ease;
+		}
+
+		.social a:hover {
+			color: #764ba2;
+			transform: scale(1.2);
+		}
+
+		footer.primary {
+			background: #2d3748;
+			color: white;
+			padding: 30px 0;
+			text-align: center;
+		}
+
+		.centered {
+			text-align: center;
+		}
+
+		@media (min-width: 768px) {
+			.featured {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			.projects {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			#about-contact .wrapper {
+				grid-template-columns: 260px 1fr;
+			}
+
+			.profile-photo {
+				grid-row: 1 / 3;
+			}
+		}
+
+		@media (min-width: 1024px) {
+			.projects {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header class="primary">
+        <div class="wrapper">
+			<div class="logo-container">
+				<h1>Adishree<br>Gupta<br>Portfolio</h1>
+				<a href="index.html"><img src="PES1UG23CS024" alt="Adishree Gupta" id="logo"></a>
+			</div>
+            
+			<nav id="mainnav">
+            	<ul>
+                	<li><a href="#work">Work</a></li>
+                    <li><a href="#about-contact">About</a></li>
+                    <li><a href="#about-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="work">
+   		<div class="wrapper">
+        	<h2>Check Out My Best Projects</h2>
+        	<section class="featured">
+                <article>
+                	<a href="#"><img src="https://dummyimage.com/510x300/667eea/fff&text=RAG+Pipeline+Architecture" alt="RAG Pipeline Project"></a>
+                </article>
+                
+                <article>
+                	<h3>Multimodal RAG Pipeline with LLMs</h3>
+                    <h4>Challenge Statement</h4>
+                    <p>Build an end-to-end microservices-based architecture integrating Retrieval-Augmented Generation with Large Language Models for academic artifacts. The system needed to handle multimodal data (text, images with OCR, and video transcripts), provide source-cited responses, and scale efficiently.</p>
+                    <p><a href="#">Find out how I solved this problem</a></p> 
+                </article>
+            </section>
+            
+            <section class="projects">
+            	<article>
+                	<h3>CausalLLM-GENDEF Framework</h3>
+                	<a href="#"><img src="https://dummyimage.com/340x200/764ba2/fff&text=Security+Research" alt="Cybersecurity Project"></a>
+                    <p><strong>Role:</strong> AI Researcher</p>
+                    <p><strong>Description:</strong> Graph-Causal Hybrid Framework for Real-Time Detection and Attribution of Distributed Brute Force Attacks using LLMs.</p>
+                </article>
+                
+                <article>
+                	<h3>MERN Stack Web Applications</h3>
+                	<a href="#"><img src="https://dummyimage.com/340x200/667eea/fff&text=Full+Stack+Development" alt="MERN Stack Project"></a>
+                    <p><strong>Role:</strong> Full Stack Developer</p>
+                    <p><strong>Description:</strong> Built three modern web applications accommodating 1,000+ concurrent users with zero downtime. Awarded 'Best Project' at EY GDS.</p>
+                </article>
+                
+                <article>
+                	<h3>Sports Analytics Dashboard</h3>
+                	<a href="#"><img src="https://dummyimage.com/340x200/5a67d8/fff&text=Data+Analytics" alt="Analytics Project"></a>
+                    <p><strong>Role:</strong> Sports Analyst Intern</p>
+                    <p><strong>Description:</strong> Leveraged Python, OpenCV & TensorFlow to analyze player performance, improving dashboard usability by 90%.</p>
+                </article>
+				
+				<article>
+                	<h3>Database Optimization</h3>
+                	<a href="#"><img src="https://dummyimage.com/340x200/805ad5/fff&text=Backend+Engineering" alt="Database Project"></a>
+                    <p><strong>Role:</strong> SDE Intern</p>
+                    <p><strong>Description:</strong> Enhanced MongoDB indexing and Node.js queries, reducing average query latency by 12% for 500+ equity traders.</p>
+                </article>
+            </section>
+            
+        </div>
+    </section>
+    
+    <section id="about-contact" class="secondary">
+   		<div class="wrapper">
+        	
+			<div class="profile-photo">
+            	<img src="PES1UG23CS024" alt="Adishree Gupta">
+            </div>
+			
+            <article>
+				<h2>About Me</h2>
+				<p>I'm a Generative AI Engineer and Full Stack Developer passionate about building innovative solutions at the intersection of artificial intelligence and cybersecurity. Currently pursuing Computer Science at PES University, I specialize in LLMs, RAG pipelines, AI agents, and the MERN stack.</p>
+				
+				<p>My journey spans cutting-edge AI research at IISc and PES University's Center for Innovation and Entrepreneurship, where I've built microservices architectures integrating multimodal RAG systems. I've contributed to impactful projects at EY Global Delivery Services, Infosys Springboard, and Bluestock, gaining hands-on experience in full-stack development, database optimization, and sports analytics.</p>
+				
+				<h3>Skills & Expertise</h3>
+				<p>I'm particularly skilled in <strong>LangChain, LlamaIndex, RAG architectures, and AI agent development</strong>. I excel at building scalable microservices with <strong>Docker, Kubernetes, FastAPI, and WebSockets</strong>. Currently exploring advanced applications of <strong>semantic search with Qdrant and FAISS</strong>, and I'm excited about pushing the boundaries of generative AI for real-world security and productivity solutions.</p>
+				
+				<p><strong>Achievements:</strong> TCS CodeVita 2025 Global Rank #364 | Techgig Geek Goddess 2023 AIR 113 | Smart India Hackathon '24 Qualifier</p>
+			</article> 
+                
+			<article>
+				<h2>Contact Me!</h2>
+				<p>I'm actively seeking opportunities in AI research, generative AI engineering, and full-stack development roles. Whether you're interested in collaborating on cutting-edge AI projects, discussing LLMs and RAG systems, or exploring cybersecurity innovations, I'd love to connect!</p>
+
+				<p>
+					<i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:adishreegupta@gmail.com">adishreegupta@gmail.com</a><br>
+					<i class="fa fa-map-marker" aria-hidden="true"></i> Bengaluru, Karnataka, India
+				</p>
+
+				<p class="social">
+					<a href="https://www.linkedin.com/in/adishreegupta" target="_blank"><i class="fab fa-linkedin"></i></a> 
+					<a href="https://adishreegupta.substack.com/" target="_blank"><i class="fas fa-blog"></i></a>
+					<a href="https://github.com/1stsimplifycode" target="_blank"><i class="fab fa-github"></i></a>
+				</p>
+			</article>
+                   
+        </div>
+    </section>
+    
+    <footer class="primary">
+    	<div class="wrapper">
+        	<p class="centered">&copy; 2025 Adishree Gupta. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
